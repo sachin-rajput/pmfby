@@ -149,7 +149,7 @@ const loadData = async () => {
     Object.entries(state).map(async value => {
       const stateSerial = value[1][0];
       const stateID = value[1][1];
-      const stateName = value[0][0];
+      const stateName = value[0];
       //   console.log(schemeID + seasonID + stateSerial + yearID);
       const sssy_id = schemeID + seasonID + stateSerial + yearID;
       const districts = await getDistrictList(stateID, sssy_id);
