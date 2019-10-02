@@ -1,0 +1,17 @@
+{
+  "name": "pmfby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loadData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "2.3.1",
+    "csv-write-stream": "2.0.0",
+    "axios": "0.19.0"
+  }
+}
