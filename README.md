@@ -1,5 +1,13 @@
 # PMFBY Data Extraction Tool for Premiums
 
+### Read Code in below sequence:
+
+- formData.js (All data from drop-downs)
+- api.js (3 APIs)
+- loadData.js
+
+In loadData.js start from bottom, first see initializeFile then loadData function
+
 ### Installation
 
 git clone https://github.com/sachin-rajput/pmfby.git
