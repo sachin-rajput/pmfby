@@ -8,8 +8,8 @@ const apiConfig = {
  * This API is used to get the district lists for a particular state with sssyID
  * To understand sssyID, see formData.js - point number 3 in comments at the top
  *
- * @param {*} stateID
- * @param {*} sssyID
+ * @param {string} stateID
+ * @param {number} sssyID
  */
 async function getDistrictList(stateID, sssyID) {
   const response = await axios({
@@ -23,8 +23,8 @@ async function getDistrictList(stateID, sssyID) {
  * This API is used to get crop list for a particular district
  * To understand sssyID, see formData.js - point number 3 in comments at the top
  *
- * @param {*} districtID
- * @param {*} sssyID
+ * @param {string} districtID
+ * @param {number} sssyID
  */
 async function getCropList(districtID, sssyID) {
   const response = await axios({
@@ -38,9 +38,9 @@ async function getCropList(districtID, sssyID) {
  * This API is used to get the premium for each combination of scheme + year + season + state + district + crop
  * To understand sssyID, see formData.js - point number 3 in comments at the top
  *
- * @param {*} districtID
- * @param {*} cropID
- * @param {*} sssyID
+ * @param {string} districtID
+ * @param {string} cropID
+ * @param {number} sssyID
  */
 async function getPremium(districtID, cropID, sssyID) {
   const response = await axios({
