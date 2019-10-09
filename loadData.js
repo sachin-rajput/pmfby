@@ -37,7 +37,7 @@ const initializeFile = () => {
     });
   else writer = csvWriter({ sendHeaders: false });
 
-  writer.pipe(fs.createWriteStream(finalPathFile, { flags: "a" }));
+  writer.pipe(fs.createWriteStream(outputPath, { flags: "a" }));
 
   return writer;
 };
@@ -124,12 +124,16 @@ const loadData = async writer => {
                   sum_insured: premium.sumInsured,
                   farmer_share: premium.farmerShare,
                   acturial_rate: premium.premiumRate,
-                  cut_off_date: premium.cutOfDate,
+                  cut_off_date: new Date(
+                    premium.cutOfDate * 1000
+                  ).toLocaleString(),
                   area: 1,
                   premium_paid_farmer:
                     (premium.sumInsured * premium.farmerShare) / 100,
                   premium_paid_goi:
-                    (premium.sumInsured * premium.premiumRate) / 100
+                    (premium.sumInsured *
+                      (premium.premiumRate - premium.farmerShare)) /
+                    100
                 };
 
                 console.log(dataR);
